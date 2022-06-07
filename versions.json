@@ -6,7 +6,7 @@
     "previousVersions": [
         {
             "version": "2.0.0",
-            "releasePath": ""
+            "releasePath": "https://github.com/rohitnarayan-me/rpichef-releases/releases/download/2.0.0/chef-eye-raspberry-pi_2.0.0_arm64.deb"
         }
     ]
 }
