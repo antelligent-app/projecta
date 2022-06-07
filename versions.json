@@ -1,0 +1,12 @@
+{
+    "latest": {
+        "version": "2.1.0",
+        "releasePath": ""
+    },
+    "previousVersions": [
+        {
+            "version": "2.0.0",
+            "releasePath": ""
+        }
+    ]
+}
