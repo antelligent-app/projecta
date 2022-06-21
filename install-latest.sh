@@ -11,7 +11,27 @@ sudo apt update
 sudo apt-get install jq -y
 sudo apt install network-manager -y
 sudo apt install network-manager-gnome -y
+sudo apt install jpegoptim -y
 sudo apt install git -y
+
+sudo su
+
+if grep -q "denyinterfaces wlan0" "/etc/dhcpcd.conf"; then
+    echo "denyinterfaces wlan0 already present in /etc/dhcpcd.conf"
+    else
+    echo "denyinterfaces wlan0 not present in /etc/dhcpcd.conf. Adding it..."
+    echo "denyinterfaces wlan0" >> /etc/dhcpcd.conf
+fi
+
+echo "" > /etc/NetworkManager/NetworkManager.conf 
+echo "[main]" >> /etc/NetworkManager/NetworkManager.conf 
+echo "plugins=ifupdown,keyfile" >> /etc/NetworkManager/NetworkManager.conf
+echo "dhcp=internal" >> /etc/NetworkManager/NetworkManager.conf
+echo "" >> /etc/NetworkManager/NetworkManager.conf
+echo "[ifupdown]" >> /etc/NetworkManager/NetworkManager.conf
+echo "managed=true" >> /etc/NetworkManager/NetworkManager.conf
+
+exit
 
 sudo mkdir -p /home/chefberrypi/
 sudo chown -fR pi:pi /home/chefberrypi/
