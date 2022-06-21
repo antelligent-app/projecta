@@ -65,3 +65,5 @@ sudo dpkg -i lib-florence.deb
 
 wget http://raspbian.raspberrypi.org/raspbian/pool/main/f/florence/florence_0.6.3-1.2_armhf.deb -O florence.deb
 sudo dpkg -i florence.deb
+
+sudo apt install -f
