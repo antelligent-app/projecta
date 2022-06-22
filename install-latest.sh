@@ -12,6 +12,8 @@ sudo raspi-config nonint do_ssh 1
 sudo apt update
 sudo apt install fping -y
 sudo apt install jq -y
+sudo apt install jpegoptim -y
+sudo apt install git -y
 sudo apt install network-manager -y
 
 while [ "$(fping google.com | grep alive)" == "" ]
@@ -28,10 +30,7 @@ do
     echo "Waiting for internet connection..."
     sleep 10
 done
-echo "Internet connection available now, proceeding with next package"
-
-sudo apt install jpegoptim -y
-sudo apt install git -y
+echo "Internet connection available now, proceeding..."
 
 if grep -q "denyinterfaces wlan0" "/etc/dhcpcd.conf"; then
     echo "denyinterfaces wlan0 already present in /etc/dhcpcd.conf"
