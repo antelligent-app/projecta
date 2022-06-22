@@ -1,16 +1,7 @@
 {
     "latest": {
         "version": "2.1.6",
-        "releasePath": "https://github.com/rohitnarayan-me/rpichef-releases/releases/download/2.1.6/chef-eye-raspberry-pi_2.1.6_arm64.deb"
+        "releasePath": "https://github.com/antelligent-app/projecta/releases/download/2.1.6/chef-eye-raspberry-pi_2.1.6_arm64.deb"
     },
-    "previousVersions": [
-        {
-            "version": "2.0.0",
-            "releasePath": "https://github.com/rohitnarayan-me/rpichef-releases/releases/download/2.0.0/chef-eye-raspberry-pi_2.0.0_arm64.deb"
-        },
-        {
-            "version": "2.1.0",
-            "releasePath": "https://github.com/rohitnarayan-me/rpichef-releases/releases/download/2.1.0/chef-eye-raspberry-pi_2.1.0_arm64.deb"
-        }
-    ]
+    "previousVersions": []
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo raspi-config nonint do_rgpio 1
-sudo raspi-config nonint do_camera 1
+sudo raspi-config nonint do_camera 0
 sudo raspi-config nonint do_serial 1
 sudo raspi-config nonint do_i2c 1
 sudo raspi-config nonint do_onewire 1
