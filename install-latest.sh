@@ -50,10 +50,12 @@ echo "managed=true" >> /etc/NetworkManager/NetworkManager.conf
 sudo mkdir -p /home/chefberrypi/
 sudo chown -fR pi:pi /home/chefberrypi/
 cd /home/chefberrypi/
+wget https://raw.githubusercontent.com/antelligent-app/projecta/main/shutdown-board.py -O shutdown-board.py
 git clone --depth=1 https://github.com/antelligent-app/hx711.git
 cd hx711
 sudo ./install-deps.sh
 make && sudo make install
+sudo chown -fR pi:pi /home/chefberrypi/
 
 cd /tmp
 wget https://raw.githubusercontent.com/antelligent-app/projecta/main/versions.json
