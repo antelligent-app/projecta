@@ -60,6 +60,10 @@ sudo chown -fR pi:pi /home/chefberrypi/
 cd /tmp
 wget https://raw.githubusercontent.com/antelligent-app/projecta/main/versions.json
 RELEASE_PATH=$(cat versions.json | jq -r ".latest.releasePath")
+if [ $1 ] && [ $1 = "--beta" ]; then
+    echo "Using beta version"
+    RELEASE_PATH=$(cat versions.json | jq -r ".beta.releasePath")
+fi
 wget $RELEASE_PATH -O chef-eye.deb
 sudo dpkg -i chef-eye.deb
 
