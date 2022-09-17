@@ -15,6 +15,7 @@ sudo apt install jq -y
 sudo apt install jpegoptim -y
 sudo apt install git -y
 sudo apt install network-manager -y
+sudo apt install wmctrl -y
 
 while [ "$(fping google.com | grep alive)" == "" ]
 do
