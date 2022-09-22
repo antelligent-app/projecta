@@ -8,6 +8,8 @@ sudo raspi-config nonint do_onewire 1
 sudo raspi-config nonint do_spi 1
 sudo raspi-config nonint do_vnc 1
 sudo raspi-config nonint do_ssh 1
+sudo raspi-config nonint do_blanking 0
+sudo raspi-config nonint do_vnc 0
 
 sudo apt update
 sudo apt install fping -y
