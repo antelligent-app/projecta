@@ -83,3 +83,6 @@ sudo apt install -f -y
 
 sudo systemctl enable teamviewerd.service
 sudo systemctl start teamviewerd.service
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
+
