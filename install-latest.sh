@@ -86,3 +86,9 @@ sudo systemctl start teamviewerd.service
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 
+
+gpginited="/home/chefberrypi/.gpginited"
+
+if [ -f "$gpginited" ] ; then
+    rm "$gpginited"
+fi
