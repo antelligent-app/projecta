@@ -18,6 +18,7 @@ sudo apt install jpegoptim -y
 sudo apt install git -y
 sudo apt install network-manager -y
 sudo apt install wmctrl -y
+sudo apt install gnome-system-tools -y
 
 while [ "$(fping google.com | grep alive)" == "" ]
 do
