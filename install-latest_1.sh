@@ -96,6 +96,8 @@ fi
 
 
 echo " init=/usr/lib/raspi-config/init_resize.sh" >> /boot/cmdline.txt
+tr -d '\n' < /boot/cmdline.txt > /boot/cmdline_bkp.txt
+mv /boot/cmdline_bkp.txt /boot/cmdline.txt
 sudo wget -O /etc/init.d/resize2fs_once https://raw.githubusercontent.com/antelligent-app/projecta/main/resize2fs_once
 sudo chmod +x /etc/init.d/resize2fs_once
 sudo systemctl enable resize2fs_once
