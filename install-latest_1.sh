@@ -87,6 +87,10 @@ sudo systemctl enable teamviewerd.service
 sudo systemctl start teamviewerd.service
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
+sudo apt-get install firefox-esr
+
+sudo mkdir /usr/lib/firefox/
+cd /usr/lib/firefox; sudo ln -s ../firefox-esr/firefox-esr  firefox
 
 
 gpginited="/home/chefberrypi/.gpginited"
