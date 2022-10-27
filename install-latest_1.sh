@@ -20,6 +20,7 @@ sudo apt install network-manager -y
 sudo apt install wmctrl -y
 sudo apt install gnome-system-tools -y
 sudo apt install i2c-tools -y
+sudo apt install firefox-esr -y
 
 while [ "$(fping google.com | grep alive)" == "" ]
 do
@@ -87,10 +88,6 @@ sudo systemctl enable teamviewerd.service
 sudo systemctl start teamviewerd.service
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
-sudo apt-get install firefox-esr
-
-sudo mkdir /usr/lib/firefox/
-cd /usr/lib/firefox; sudo ln -s ../firefox-esr/firefox-esr  firefox
 
 
 gpginited="/home/chefberrypi/.gpginited"
@@ -110,3 +107,13 @@ sudo systemctl enable resize2fs_once
 
 echo "i2c-bcm2708" >> /etc/modules
 echo "i2c-dev" >> /etc/modules
+cd ~
+wget https://raw.githubusercontent.com/antelligent-app/projecta/main/setup_hwclock.sh
+chmod a+x setup_hwclock.sh
+
+echo "Restarting in 15 seconds..."
+echo "After system restart is complete, please run ~/setup_hwclock.sh to setup HWClock."
+echo "Press ctrl+c to abort rebooting."
+
+sleep 15
+sudo reboot
