@@ -19,6 +19,7 @@ sudo apt install git -y
 sudo apt install network-manager -y
 sudo apt install wmctrl -y
 sudo apt install gnome-system-tools -y
+sudo apt install i2c-tools -y
 
 while [ "$(fping google.com | grep alive)" == "" ]
 do
@@ -101,3 +102,7 @@ mv /boot/cmdline_bkp.txt /boot/cmdline.txt
 sudo wget -O /etc/init.d/resize2fs_once https://raw.githubusercontent.com/antelligent-app/projecta/main/resize2fs_once
 sudo chmod +x /etc/init.d/resize2fs_once
 sudo systemctl enable resize2fs_once
+
+
+echo "i2c-bcm2708" >> /etc/modules
+echo "i2c-dev" >> /etc/modules
