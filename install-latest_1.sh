@@ -107,13 +107,14 @@ sudo systemctl enable resize2fs_once
 
 echo "i2c-bcm2708" >> /etc/modules
 echo "i2c-dev" >> /etc/modules
-cd ~
-wget https://raw.githubusercontent.com/antelligent-app/projecta/main/setup_hwclock.sh
+
+cd /home/chefberrypi/
+wget https://raw.githubusercontent.com/antelligent-app/projecta/main/setup_hwclock.sh  -O setup_hwclock.sh
 chmod a+x setup_hwclock.sh
 
-echo "Restarting in 15 seconds..."
-echo "After system restart is complete, please run ~/setup_hwclock.sh to setup HWClock."
+echo "Restarting in 30 seconds..."
+echo "After system restart is complete, please run /home/chefberrypi/setup_hwclock.sh to setup HWClock."
 echo "Press ctrl+c to abort rebooting."
 
-sleep 15
+sleep 30
 sudo reboot
