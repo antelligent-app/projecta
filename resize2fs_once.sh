@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ROOT_PART="$(findmnt / -o source -n)"
 ROOT_DEV="/dev/$(lsblk -no pkname "$ROOT_PART")"
 

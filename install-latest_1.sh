@@ -113,6 +113,7 @@ wget https://raw.githubusercontent.com/antelligent-app/projecta/main/setup_hwclo
 chmod a+x setup_hwclock.sh
 
 wget https://raw.githubusercontent.com/antelligent-app/projecta/main/resize2fs_once.sh -O resize2fs_once.sh
+chmod a+x resize2fs_once.sh
 
 fsResizeInited="/home/chefberrypi/.fsresizeinited"
 
