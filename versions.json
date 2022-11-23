@@ -4,8 +4,8 @@
         "releasePath": "https://github.com/antelligent-app/projecta/releases/download/2.1.21/chef-eye-raspberry-pi_2.1.21_arm64.deb"
     },
     "beta": {
-        "version": "2.1.26",
-        "releasePath": "https://github.com/antelligent-app/projecta/releases/download/2.1.26/chef-eye-raspberry-pi_2.1.26_arm64.deb"
+        "version": "2.1.27",
+        "releasePath": "https://github.com/antelligent-app/projecta/releases/download/2.1.27/chef-eye-raspberry-pi_2.1.27_arm64.deb"
     },
     "previousVersions": [{
         "version": "2.1.11",
